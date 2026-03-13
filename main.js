@@ -54,6 +54,7 @@ function getShiftDuration(startTime, endTime) {
 // Returns: string formatted as h:mm:ss
 // ============================================================
 function getIdleTime(startTime, endTime) {
+    // Calculate idle time: any shift hours outside business hours (8 AM - 10 PM)
     let time24Start = convertTo24Hour(startTime);
     let time24End = convertTo24Hour(endTime);
     
